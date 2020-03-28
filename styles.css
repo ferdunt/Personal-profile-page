@@ -1,35 +1,38 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: #f6f6d4;
 }
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #999;
+  color: #fbe9b9;
 }
 a:hover {
-  color: #6633ff;
+  /* color: #6633ff; */
+  color: #fff;
 }
 
 /* Section Styles */
 
 .main-nav {
   width: 100%;
-  background: black;
+  background: #27242b;
   min-height: 30px;
   padding: 10px;
   position: fixed;
   text-align: center;
+  font-size: 19px;
+  opacity: 0.9;
 }
 .nav {
   display: flex;
@@ -41,23 +44,24 @@ a:hover {
 }
 
 .nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
+  display: block;
+  margin-right: auto;
+  color: #f5cd7f;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
+  color: #c7bba3;
 }
 .nav a {
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .nav a:hover {
-  color: white
+  color: white;
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url("images/forest.jpg") no-repeat top center;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -70,36 +74,42 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
-  transition: all .5s;
+  border: 3px solid #3d3c33;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2);
+  border: 3px solid #666455;
 }
 .tag {
-  background-color: #efefef;
-  color: black;
+  background-color: #d1ae69;
+  color: #27242b;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
-.location {
-  background-color: #222;
-  color: yellow;
+  opacity: 0.9;
 }
-.card {
-  margin: 30px;
-  padding: 20px 40px 40px;
+
+.location {
+  background-color: #1a202b;
+  color: #dbb975;
+}
+
+article {
+  margin: 15px;
+  padding: 20px 20px 40px;
   max-width: 500px;
-  text-align: left;
+  text-align: center;
   background: #fff;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
-  transition: all .5s;
+  transition: all 0.5s;
+  box-shadow: 10px 7px 17px 0px rgba(0, 0, 0, 0.75);
 }
-.card:hover {
-  border-color: #ff99ff;
+
+article:hover {
+  border-color: #9c8e2a;
 }
 
 ul.skills {
@@ -110,14 +120,14 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #996839;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #9f992f;
 }
 
 footer {
@@ -128,7 +138,8 @@ footer {
 
 footer .copyright {
   top: -8px;
-  font-size: .75em;
+  font-size: 0.8em;
+  font-weight: 500;
 }
 
 footer ul {
@@ -148,8 +159,8 @@ a.social {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
+  opacity: 0.4;
+  transition: all 0.5s;
 }
 a.twitter {
   background-image: url(images/twitter.svg);
@@ -169,14 +180,13 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
   }
 
   header {
@@ -187,7 +197,6 @@ a.social:hover {
     max-width: 1200px;
     padding: 0 30px;
   }
-
 
   main {
     padding-top: 20px;
@@ -202,6 +211,4 @@ a.social:hover {
     max-width: 1200px;
     margin: 40px auto;
   }
-
 }
-
